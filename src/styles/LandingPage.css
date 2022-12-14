@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Libre_Baskerville;
+  src: url(../static/Libre_Baskerville/LibreBaskerville-Bold.woff)
+    url(../static/Libre_Baskerville/LibreBaskerville-Bold.woff);
+}
+@font-face {
+  font-family: Pacifico;
+  src: url(../static/Pacifico/Pacifico-Regular.ttf);
+}
+
+.Header {
+  background-color: rgb(255, 255, 255);
+  min-height: 13vh;
+  color: rgb(233, 151, 0);
+  font-family: Pacifico;
+  font-size: 8vh;
+}
+
+.Header > h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+}
+
+.LandingPage {
+  background-image: url(../static/background.jpg);
+  min-height: 100vh;
+  background-size: 100% 130%;
+}
+#recommended-products img {
+  width: 350px;
+  height: 300px;
+}
+.content {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+#recommended-products {
+  display: flex;
+}
