@@ -1,0 +1,30 @@
+.Header {
+  background-color: rgb(255, 255, 255);
+  min-height: 13vh;
+  max-width: 100vw;
+  min-width: 100vw;
+  color: rgb(233, 151, 0);
+  font-family: Pacifico;
+  font-size: 8vh;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+}
+
+#header-options {
+  display: flex;
+  gap: 5vw;
+  padding-right: 3vw;
+}
+.header-option {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+.Header > h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  padding-left: 3vw;
+}

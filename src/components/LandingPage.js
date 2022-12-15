@@ -8,7 +8,8 @@ const LandingPage = () => {
       <Header />
       <div className="content">
         <div id="bakery-quote" data-testid="bakery-quote">
-          Some catchy and tasty quote
+          <p>Some catchy and tasty quote.</p>
+          <div id="check-shop-button">Check our Shop!</div>
         </div>
         <div id="recommended-products">
           <img id="recommended-bread" src={croissant} alt="croissant" />
