@@ -1,0 +1,46 @@
+{
+  "breads": [
+    {
+      "id": 1,
+      "name": "croissant",
+      "price": 1.5
+    },
+    {
+      "id": 2,
+      "name": "french-bread",
+      "price": 3.0
+    },
+    {
+      "id": 3,
+      "name": "garlic-bread",
+      "price": 1.3
+    },
+    {
+      "id": 4,
+      "name": "muffins",
+      "price": 0.75
+    }
+  ],
+  "coffee": [
+    {
+      "id": 5,
+      "name": "caramel-macchiato",
+      "price": 3.0
+    },
+    {
+      "id": 6,
+      "name": "iced-americano",
+      "price": 2.0
+    },
+    {
+      "id": 7,
+      "name": "iced-cappucino",
+      "price": 3.0
+    },
+    {
+      "id": 8,
+      "name": "iced-matcha-green-latte",
+      "price": 3.5
+    }
+  ]
+}
