@@ -2,7 +2,8 @@ import { useState } from "react";
 import Menu from "../assets/menu.json";
 import Card from "../components/Card";
 import Header from "../components/Header";
-
+import getBreads from "../modules/Breads";
+import getCoffees from "../modules/Coffee";
 const importImages = (r) => {
   let images = {};
   r.keys().map((item) => {
@@ -11,48 +12,22 @@ const importImages = (r) => {
   return images;
 };
 
-const setupMenu = () => {
-  const breadImages = importImages(
-    require.context("../assets/images/breads", false, /\.(png)$/)
-  );
-
-  Menu.breads = Menu.breads.map((bread) => {
-    return {
-      ...bread,
-      imageURL: breadImages[bread.name + ".png"],
-    };
-  });
-
-  const coffeeImages = importImages(
-    require.context("../assets/images/coffee", false, /\.(png)$/)
-  );
-
-  Menu.coffee = Menu.coffee.map((coffee) => {
-    return {
-      ...coffee,
-      imageURL: coffeeImages[coffee.name + ".png"],
-    };
-  });
-};
-
 const Shop = () => {
-  setupMenu();
-
-  const [breads, setBreads] = useState(Menu.breads);
-  const [coffee, setCoffee] = useState(Menu.coffee);
+  const [breads, setBreads] = useState(getBreads());
+  const [coffee, setCoffee] = useState(getCoffees());
 
   return (
     <div className="Shop">
       <Header />
       <div>
-        {breads.map((bread) => {
-          return <Card obj={bread} />;
-        })}
+        {breads.map((bread) => (
+          <Card obj={bread} />
+        ))}
       </div>
       <div>
-        {coffee.map((coffee) => {
-          return <Card obj={coffee} />;
-        })}
+        {coffee.map((coff) => (
+          <Card obj={coff} />
+        ))}
       </div>
     </div>
   );

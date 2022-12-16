@@ -4,7 +4,7 @@ const Card = ({ obj }) => {
   return (
     <div className="card">
       <img src={obj.imageURL} alt={obj.name} className="card-image" />
-      <p>{obj.name}</p>
+      <h3>{obj.name}</h3>
     </div>
   );
 };
