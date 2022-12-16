@@ -1,0 +1,5 @@
+{
+  "breads": [
+    { "id": "001", "name": "croissant", "url": "./static/breads/croissant.png" }
+  ]
+}
