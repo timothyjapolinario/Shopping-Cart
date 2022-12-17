@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import Header from "../components/Header";
 import getBreads from "../modules/Breads";
 import getCoffees from "../modules/Coffee";
+import "../styles/Shop.css";
 const importImages = (r) => {
   let images = {};
   r.keys().map((item) => {
@@ -16,18 +17,27 @@ const Shop = () => {
   const [breads, setBreads] = useState(getBreads());
   const [coffee, setCoffee] = useState(getCoffees());
 
+  const [filter, setFilter] = useState({
+    breadFilter: false,
+  });
+
   return (
-    <div className="Shop">
+    <div className="Shop bg-pattern">
       <Header />
-      <div>
-        {breads.map((bread) => (
-          <Card obj={bread} />
-        ))}
+      <div className="menu-sidebar">
+        <input type={"checkbox"} data-testid="bread-filter" />
       </div>
-      <div>
-        {coffee.map((coff) => (
-          <Card obj={coff} />
-        ))}
+      <div id="shop-list">
+        <div>
+          {breads.map((bread) => (
+            <Card obj={bread} />
+          ))}
+        </div>
+        <div>
+          {coffee.map((coff) => (
+            <Card obj={coff} />
+          ))}
+        </div>
       </div>
     </div>
   );

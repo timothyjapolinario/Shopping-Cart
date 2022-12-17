@@ -26,7 +26,7 @@
   padding-left: 3vw;
 }
 
-.header-option a {
+a {
   text-decoration: none;
-  color: rgb(233, 151, 0);
+  color: rgb(255, 255, 255);
 }

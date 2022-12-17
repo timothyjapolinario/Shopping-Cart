@@ -11,15 +11,19 @@ const LandingPage = () => {
     <div className="LandingPage">
       <Header />
       <div className="content">
-        <div id="bakery-quote" data-testid="bakery-quote">
-          <p>{quote}</p>
+        <div id="quote-button-wrapper" data-testid="bakery-quote">
+          <p id="bakery-quote">{quote}</p>
           <div id="check-shop-button">
-            <Link to={"/shop"}> Check our Shop!</Link>
+            <Link to={"/shop"} data-testid="shop-navigation">
+              Check our Shop!
+            </Link>
           </div>
         </div>
         <div id="recommended-products">
-          <img id="recommended-bread" src={croissant} alt="croissant" />
-          <img id="recommended-coffee" src={coffee} alt="coffee" />
+          <div className="rel-wrapper">
+            <img id="recommended-coffee" src={coffee} alt="coffee" />
+            <img id="recommended-bread" src={croissant} alt="croissant" />
+          </div>
         </div>
       </div>
     </div>

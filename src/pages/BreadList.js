@@ -1,11 +1,6 @@
 import Header from "../components/Header";
 
-const breadFactory = () => {
-  const breadObjects = [{}, {}, {}, {}];
-  return [...breadObjects];
-};
-
-const BreadList = () => {
+const BreadList = ({ breads }) => {
   return (
     <div>
       <Header />

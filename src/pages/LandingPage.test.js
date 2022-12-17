@@ -16,9 +16,6 @@ describe("Landing Page Component", () => {
 
   it("has correct links to other pages", async () => {
     render(<LandingPage />, { wrapper: BrowserRouter });
-    expect(screen.getByTestId("bread-navigation").href).toMatch("/shop/breads");
-    expect(screen.getByTestId("coffee-navigation").href).toMatch(
-      "/shop/coffee"
-    );
+    expect(screen.getByTestId("shop-navigation").href).toMatch("/shop");
   });
 });

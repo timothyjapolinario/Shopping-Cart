@@ -1,0 +1,14 @@
+.bg-pattern {
+  background-image: url(../assets/images/background.jpg);
+  background-size: 100% 130%;
+}
+.card {
+  width: fit-content;
+}
+
+#shop-list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20vw;
+}

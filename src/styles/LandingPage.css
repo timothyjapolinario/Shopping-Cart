@@ -23,26 +23,46 @@
 }
 
 #recommended-products {
-  bottom: 17vh;
-  right: 5vw;
+  bottom: 30vh;
+  right: 15vw;
   position: absolute;
-  display: flex;
 }
 #recommended-products img {
   width: 350px;
   height: 300px;
 }
-#bakery-quote {
+#quote-button-wrapper {
   position: absolute;
   font-family: Pacifico;
   left: 10vw;
-  bottom: 38vh;
+  bottom: 50vh;
   font-size: 50px;
   z-index: 999999;
+  background-color: rgba(240, 248, 255, 0.664);
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
-#bakery-quote * {
+#recommended-bread {
+  transform: rotate(50deg);
+  transform: translate(0, -100px) rotate(-60deg);
+}
+#recommended-coffee {
+  left: 6vw;
+  position: absolute;
+  z-index: 9999999;
+}
+#quote-button-wrapper * {
   padding: 0;
   margin: 0;
+}
+
+#rel-wrapper {
+  position: relative;
 }
 .content {
   min-width: 100%;
