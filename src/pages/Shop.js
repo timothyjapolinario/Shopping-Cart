@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "../assets/menu.json";
 import Card from "../components/Card";
 import Header from "../components/Header";
@@ -18,25 +18,49 @@ const Shop = () => {
   const [coffee, setCoffee] = useState(getCoffees());
 
   const [filter, setFilter] = useState({
-    breadFilter: false,
+    breadFilter: true,
+    coffeeFilter: true,
   });
+
+  useEffect(() => {
+    console.log(filter);
+  }, [filter]);
 
   return (
     <div className="Shop bg-pattern">
       <Header />
       <div className="menu-sidebar">
-        <input type={"checkbox"} data-testid="bread-filter" />
+        <div>
+          <label htmlFor="bread-filter">Bread</label>
+          <input
+            id={"bread-filter"}
+            type={"checkbox"}
+            checked={filter.breadFilter}
+            data-testid="bread-filter"
+            onChange={() => {
+              setFilter({ ...filter, breadFilter: !filter.breadFilter });
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="coffee-filter">Coffee</label>
+          <input
+            id={"coffee-filter"}
+            type={"checkbox"}
+            checked={filter.coffeeFilter}
+            data-testid="coffee-filter"
+            onChange={() => {
+              setFilter({ ...filter, coffeeFilter: !filter.coffeeFilter });
+            }}
+          />
+        </div>
       </div>
       <div id="shop-list">
         <div>
-          {breads.map((bread) => (
-            <Card obj={bread} />
-          ))}
+          {filter.breadFilter && breads.map((bread) => <Card obj={bread} />)}
         </div>
         <div>
-          {coffee.map((coff) => (
-            <Card obj={coff} />
-          ))}
+          {filter.coffeeFilter && coffee.map((coff) => <Card obj={coff} />)}
         </div>
       </div>
     </div>

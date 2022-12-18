@@ -33,32 +33,34 @@ describe("Shop", () => {
     ).toBeInTheDocument();
   });
 
-  it("filters bread only when bread filter button is clicked", () => {
+  it("filters bread only when bread filter button is clicked", async () => {
     render(<Shop />, { wrapper: BrowserRouter });
 
-    userEvent.click(screen.getByTestId("bread-filter"));
+    await userEvent.click(screen.getByTestId("bread-filter"));
     expect(
-      screen.getByRole("heading", { name: "Croissant" })
-    ).toBeInTheDocument();
+      screen.queryByRole("heading", { name: "Croissant" })
+    ).not.toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "French Bread" })
-    ).toBeInTheDocument();
+      screen.queryByRole("heading", { name: "French Bread" })
+    ).not.toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Garlic Bread" })
-    ).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "Loaf" })).toBeInTheDocument();
+      screen.queryByRole("heading", { name: "Garlic Bread" })
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("heading", { name: "Loaf" })
+    ).not.toBeInTheDocument();
 
     expect(
-      screen.queryByRole("heading", { name: "Caramel Macchiato" })
-    ).not.toBeInTheDocument();
+      screen.getByRole("heading", { name: "Caramel Macchiato" })
+    ).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: "Iced Americano" })
-    ).not.toBeInTheDocument();
+      screen.getByRole("heading", { name: "Iced Americano" })
+    ).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: "Iced Cappucino" })
-    ).not.toBeInTheDocument();
+      screen.getByRole("heading", { name: "Iced Cappucino" })
+    ).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: "Iced Matcha Green Latte" })
-    ).not.toBeInTheDocument();
+      screen.getByRole("heading", { name: "Iced Matcha Green Latte" })
+    ).toBeInTheDocument();
   });
 });
