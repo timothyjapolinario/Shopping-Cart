@@ -1,4 +1,14 @@
+.Card {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  gap: 1vw;
+  color: black;
+}
 .card-image {
-  width: 100px;
-  height: 100px;
+  width: 10vw;
+  height: 23vh;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 5px;
 }

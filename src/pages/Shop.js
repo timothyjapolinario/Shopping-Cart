@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react";
-import Menu from "../assets/menu.json";
 import Card from "../components/Card";
 import Header from "../components/Header";
 import getBreads from "../modules/Breads";
 import getCoffees from "../modules/Coffee";
 import "../styles/Shop.css";
-const importImages = (r) => {
-  let images = {};
-  r.keys().map((item) => {
-    return (images[item.replace("./", "")] = r(item));
-  });
-  return images;
-};
 
 const Shop = () => {
   const [breads, setBreads] = useState(getBreads());
@@ -25,6 +17,28 @@ const Shop = () => {
   useEffect(() => {
     console.log(filter);
   }, [filter]);
+
+  const renderBreads = () => {
+    if (filter.breadFilter) {
+      return (
+        <div>
+          {breads.map((bread) => (
+            <Card obj={bread} />
+          ))}
+        </div>
+      );
+    }
+  };
+
+  const renderCoffees = () => {
+    if (filter.coffeeFilter) {
+      return (
+        <div>
+          {filter.coffeeFilter && coffee.map((coff) => <Card obj={coff} />)}
+        </div>
+      );
+    }
+  };
 
   return (
     <div className="Shop bg-pattern">
@@ -56,12 +70,8 @@ const Shop = () => {
         </div>
       </div>
       <div id="shop-list">
-        <div>
-          {filter.breadFilter && breads.map((bread) => <Card obj={bread} />)}
-        </div>
-        <div>
-          {filter.coffeeFilter && coffee.map((coff) => <Card obj={coff} />)}
-        </div>
+        {renderBreads()}
+        {renderCoffees()}
       </div>
     </div>
   );
