@@ -1,0 +1,20 @@
+.TotalItems {
+  position: fixed;
+  right: 0;
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 30vw;
+  max-width: 30vw;
+  background-color: white;
+  z-index: 9999999999;
+  top: 0;
+  border: 1px solid black;
+  padding: 20px;
+  overflow: auto;
+}
+
+.items {
+  display: grid;
+  font-size: 30px;
+  grid-template-columns: 1fr 1fr;
+}

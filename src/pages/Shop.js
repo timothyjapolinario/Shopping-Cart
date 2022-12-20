@@ -5,7 +5,7 @@ import getBreads from "../modules/Breads";
 import getCoffees from "../modules/Coffee";
 import "../styles/Shop.css";
 
-const Shop = () => {
+const Shop = ({ cart }) => {
   const [breads, setBreads] = useState(getBreads());
   const [coffee, setCoffee] = useState(getCoffees());
 
@@ -42,7 +42,7 @@ const Shop = () => {
 
   return (
     <div className="Shop bg-pattern">
-      <Header />
+      <Header cart={cart} />
       <div className="menu-sidebar">
         <div>
           <label htmlFor="bread-filter">Bread</label>

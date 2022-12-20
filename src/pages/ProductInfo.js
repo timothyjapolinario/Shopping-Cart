@@ -17,14 +17,13 @@ const fetchProduct = (id) => {
 const ProductInfo = ({ cart, addItem }) => {
   const params = useParams();
   const [product, setProduct] = useState(fetchProduct(params.id));
-  console.log(fetchProduct(params.id));
   useEffect(() => {
     console.log(product);
   }, [product]);
 
   return (
     <div className="ProductInfo  bg-pattern">
-      <Header />
+      <Header cart={cart} />
       <div className="content-product-info">
         <div>
           <img

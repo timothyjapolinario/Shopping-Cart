@@ -1,9 +1,9 @@
 import "./App.css";
 import LandingPage from "./pages/LandingPage";
-function App() {
+function App({ cart }) {
   return (
     <div className="App">
-      <LandingPage />
+      <LandingPage cart={cart} />
     </div>
   );
 }

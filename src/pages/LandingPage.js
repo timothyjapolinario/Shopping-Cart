@@ -4,12 +4,11 @@ import croissant from "../assets/images/breads/croissant.png";
 import coffee from "../assets/images/coffee/iced-cappucino.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const LandingPage = () => {
+const LandingPage = ({ cart }) => {
   const [quote, setQuote] = useState("Some catchy and tasty quote.");
-
   return (
     <div className="LandingPage">
-      <Header />
+      <Header cart={cart} />
       <div className="content">
         <div id="quote-button-wrapper" data-testid="bakery-quote">
           <p id="bakery-quote">{quote}</p>

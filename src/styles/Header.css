@@ -3,6 +3,7 @@
   min-height: 13vh;
   color: rgb(233, 151, 0);
   font-family: Pacifico;
+  position: relative;
   font-size: 8vh;
   display: flex;
   justify-content: space-between;
@@ -14,11 +15,7 @@
   padding-right: 3vw;
   color: rgb(233, 151, 0);
 }
-.header-option {
-  display: flex;
-  align-items: center;
-  font-size: 30px;
-}
+
 .Header > h3 {
   padding: 0;
   margin: 0;
@@ -28,5 +25,27 @@
 
 a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+#website-title > a {
+  color: rgb(233, 151, 0);
+}
+#cart-button {
+  margin-right: 50px;
+  margin-top: 20px;
+  position: relative;
+}
+
+#item-count {
+  display: flex;
+  position: absolute;
+  top: -35px;
+  right: -10px;
+  background-color: white;
+  z-index: 9999;
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  border-radius: 20px;
 }

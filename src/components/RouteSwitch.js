@@ -12,7 +12,28 @@ const RouteSwitch = () => {
   }, [cart]);
 
   const addToCart = (item) => {
-    setCart(cart.concat(item));
+    const isNotNew = cart.find((cartItem) => {
+      if (cartItem) {
+        return cartItem.product.id === item.id;
+      }
+    });
+    if (isNotNew) {
+      setCart(
+        cart.map((cartItem) => {
+          if (cartItem.product.id === item.id) {
+            return { ...cartItem, count: cartItem.count + 1 };
+          }
+          return cartItem;
+        })
+      );
+    } else {
+      setCart(
+        cart.concat({
+          product: item,
+          count: 1,
+        })
+      );
+    }
   };
   return (
     <div className="RouteSwitch">
