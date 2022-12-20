@@ -3,8 +3,8 @@
   right: 0;
   min-height: 100vh;
   max-height: 100vh;
-  min-width: 30vw;
-  max-width: 30vw;
+  min-width: 500px;
+  max-width: 50vw;
   background-color: white;
   z-index: 9999999999;
   top: 0;
@@ -12,9 +12,31 @@
   padding: 20px;
   overflow: auto;
 }
-
+#close-cart {
+  font-size: 30px;
+}
 .items {
   display: grid;
   font-size: 30px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.total-price {
+  font-size: 50px;
+}
+.item-prices > div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.remove-option-list {
+  display: flex;
+  font-size: 20px;
+  gap: 10px;
+}
+.remove-option {
+  width: 35px;
+  height: 30px;
+  border: 1px solid rgb(233, 151, 0);
+  text-align: center;
 }

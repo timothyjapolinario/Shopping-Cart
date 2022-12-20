@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "../App";
+
 import "../styles/RouteSwitch.css";
 import Shop from "../pages/Shop";
 import ProductInfo from "../pages/ProductInfo";
 import { useEffect, useState } from "react";
+import Header from "./Header";
+import LandingPage from "../pages/LandingPage";
 const RouteSwitch = () => {
   const [cart, setCart] = useState([]);
 
@@ -35,11 +37,38 @@ const RouteSwitch = () => {
       );
     }
   };
+
+  const removeAllFromCart = (item) => {
+    const newCart = cart.filter((cartItem) => {
+      console.log(item);
+      return cartItem.product.id !== item.product.id;
+    });
+    setCart([...newCart]);
+  };
+
+  const removeOneFromCart = (item) => {
+    if (item.count !== 1) {
+      const newCart = cart.map((cartItem) => {
+        if (cartItem.product.id === item.product.id) {
+          return { ...cartItem, count: cartItem.count - 1 };
+        }
+        return cartItem;
+      });
+      setCart([...newCart]);
+    } else {
+      removeAllFromCart(item);
+    }
+  };
   return (
     <div className="RouteSwitch">
       <BrowserRouter>
+        <Header
+          cart={cart}
+          removeAll={removeAllFromCart}
+          removeOne={removeOneFromCart}
+        />
         <Routes>
-          <Route path="/" element={<App cart={cart} />} />
+          <Route path="/" element={<LandingPage cart={cart} />} />
           <Route path="/shop" element={<Shop cart={cart} />} />
           <Route
             path="/shop/:id"

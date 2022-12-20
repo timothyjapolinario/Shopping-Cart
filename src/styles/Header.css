@@ -4,7 +4,7 @@
   color: rgb(233, 151, 0);
   font-family: Pacifico;
   position: relative;
-  font-size: 8vh;
+
   display: flex;
   justify-content: space-between;
 }
@@ -21,6 +21,7 @@
   margin: 0;
   font-weight: 100;
   padding-left: 3vw;
+  font-size: 8vh;
 }
 
 a {
@@ -35,6 +36,7 @@ a {
   margin-right: 50px;
   margin-top: 20px;
   position: relative;
+  font-size: 55px;
 }
 
 #item-count {

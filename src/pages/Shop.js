@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
-import Header from "../components/Header";
 import getBreads from "../modules/Breads";
 import getCoffees from "../modules/Coffee";
 import "../styles/Shop.css";
 
-const Shop = ({ cart }) => {
+const Shop = () => {
   const [breads, setBreads] = useState(getBreads());
   const [coffee, setCoffee] = useState(getCoffees());
 
@@ -42,7 +41,6 @@ const Shop = ({ cart }) => {
 
   return (
     <div className="Shop bg-pattern">
-      <Header cart={cart} />
       <div className="menu-sidebar">
         <div>
           <label htmlFor="bread-filter">Bread</label>

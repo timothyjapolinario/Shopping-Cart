@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import getBreads from "../modules/Breads";
 import getCoffees from "../modules/Coffee";
-import Header from "../components/Header";
 import "../styles/ProductInfo.css";
 const fetchProduct = (id) => {
   const idInt = parseInt(id);
@@ -23,7 +22,6 @@ const ProductInfo = ({ cart, addItem }) => {
 
   return (
     <div className="ProductInfo  bg-pattern">
-      <Header cart={cart} />
       <div className="content-product-info">
         <div>
           <img
