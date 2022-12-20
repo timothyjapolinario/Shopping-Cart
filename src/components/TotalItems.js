@@ -19,7 +19,7 @@ const TotalItems = ({ cart, cartUI, toggleCart, removeAll, removeOne }) => {
         <div>
           {cart.map((item) => {
             return (
-              <div className="items">
+              <div className="items" key={"cart_" + item.id}>
                 <div className="item-names">
                   <div>{item.product.name}</div>
                 </div>

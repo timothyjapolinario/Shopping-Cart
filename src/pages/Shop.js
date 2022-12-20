@@ -22,7 +22,7 @@ const Shop = () => {
       return (
         <div>
           {breads.map((bread) => (
-            <Card obj={bread} />
+            <Card obj={bread} key={"shop_" + bread.id} />
           ))}
         </div>
       );
@@ -33,7 +33,8 @@ const Shop = () => {
     if (filter.coffeeFilter) {
       return (
         <div>
-          {filter.coffeeFilter && coffee.map((coff) => <Card obj={coff} />)}
+          {filter.coffeeFilter &&
+            coffee.map((coff) => <Card obj={coff} key={"shop_" + coff.id} />)}
         </div>
       );
     }
