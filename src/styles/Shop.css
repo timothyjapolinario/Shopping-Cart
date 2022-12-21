@@ -1,6 +1,6 @@
 .bg-pattern {
   background-image: url(../assets/images/background.jpg);
-  background-size: 100% 130%;
+  background-size: cover;
 }
 .menu-sidebar {
   background-color: white;
@@ -10,8 +10,9 @@
 }
 #shop-list {
   display: flex;
-  width: 100%;
+  margin: 50px;
   justify-content: center;
   gap: 20vw;
   min-height: 100vh;
+  flex-wrap: wrap;
 }

@@ -9,9 +9,16 @@
 }
 
 .LandingPage {
-  background-image: url(../assets/images/background.jpg);
   min-height: 87vh;
   background-size: 100% 130%;
+}
+
+#check-shop-button > a {
+  text-decoration: none;
+  color: white;
+  font-family: Libre_Baskerville;
+  font-weight: bold;
+  padding: 10px;
 }
 
 #check-shop-button {
@@ -54,23 +61,22 @@
 #recommended-coffee {
   left: 6vw;
   position: absolute;
-  z-index: 9999999;
+  z-index: 999;
 }
 #quote-button-wrapper * {
   padding: 0;
   margin: 0;
+  z-index: 99999999;
 }
 
 #rel-wrapper {
   position: relative;
 }
 .content {
-  min-width: 100%;
   min-height: 100vh;
   display: flex;
   position: relative;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   margin: 0;
   padding: 0;
 }

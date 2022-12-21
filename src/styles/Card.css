@@ -3,12 +3,17 @@
   align-items: center;
   margin: 10px;
   gap: 1vw;
-  color: black;
+  color: rgb(3, 3, 3);
+  background-color: rgb(226, 181, 125);
+  flex-direction: column;
+  font-family: Libre_Baskerville;
 }
 .card-image {
   width: 200px;
   height: 180px;
+  border: 5px solid white;
   background-color: bisque;
-  border-radius: 10px;
+
   padding: 5px;
+  margin: 5px;
 }
