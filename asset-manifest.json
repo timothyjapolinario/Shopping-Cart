@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shopping-Cart/static/css/main.3b10a933.css",
-    "main.js": "/Shopping-Cart/static/js/main.f12af94f.js",
+    "main.js": "/Shopping-Cart/static/js/main.eeb2b139.js",
     "static/media/iced-americano.png": "/Shopping-Cart/static/media/iced-americano.a6c818f06cc505b18b47.png",
     "static/media/background.jpg": "/Shopping-Cart/static/media/background.f08846e370c78ea6066f.jpg",
     "static/media/caramel-macchiato.png": "/Shopping-Cart/static/media/caramel-macchiato.05ba35403c7a78f1c3c0.png",
@@ -15,10 +15,10 @@
     "static/media/iced-cappucino.png": "/Shopping-Cart/static/media/iced-cappucino.c6366dbba85d231ec8ef.png",
     "index.html": "/Shopping-Cart/index.html",
     "main.3b10a933.css.map": "/Shopping-Cart/static/css/main.3b10a933.css.map",
-    "main.f12af94f.js.map": "/Shopping-Cart/static/js/main.f12af94f.js.map"
+    "main.eeb2b139.js.map": "/Shopping-Cart/static/js/main.eeb2b139.js.map"
   },
   "entrypoints": [
     "static/css/main.3b10a933.css",
-    "static/js/main.f12af94f.js"
+    "static/js/main.eeb2b139.js"
   ]
 }
