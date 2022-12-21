@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Shopping-Cart/static/css/main.3b10a933.css",
+    "main.js": "/Shopping-Cart/static/js/main.f12af94f.js",
+    "static/media/iced-americano.png": "/Shopping-Cart/static/media/iced-americano.a6c818f06cc505b18b47.png",
+    "static/media/background.jpg": "/Shopping-Cart/static/media/background.f08846e370c78ea6066f.jpg",
+    "static/media/caramel-macchiato.png": "/Shopping-Cart/static/media/caramel-macchiato.05ba35403c7a78f1c3c0.png",
+    "static/media/croissant.png": "/Shopping-Cart/static/media/croissant.61ac38c9eef20acc4716.png",
+    "static/media/Pacifico-Regular.ttf": "/Shopping-Cart/static/media/Pacifico-Regular.c0d735fc04154e03a691.ttf",
+    "static/media/french-bread.png": "/Shopping-Cart/static/media/french-bread.2bbdd9c715ce2138e91a.png",
+    "static/media/loaf.png": "/Shopping-Cart/static/media/loaf.08599e04b46fd48cd4f4.png",
+    "static/media/LibreBaskerville-Bold.woff": "/Shopping-Cart/static/media/LibreBaskerville-Bold.09aafcd6c3e8871bfcc6.woff",
+    "static/media/garlic-bread.png": "/Shopping-Cart/static/media/garlic-bread.21e1078a005a8005932c.png",
+    "static/media/iced-matcha-green-latte.png": "/Shopping-Cart/static/media/iced-matcha-green-latte.59d2a4b15654e6c49e6f.png",
+    "static/media/iced-cappucino.png": "/Shopping-Cart/static/media/iced-cappucino.c6366dbba85d231ec8ef.png",
+    "index.html": "/Shopping-Cart/index.html",
+    "main.3b10a933.css.map": "/Shopping-Cart/static/css/main.3b10a933.css.map",
+    "main.f12af94f.js.map": "/Shopping-Cart/static/js/main.f12af94f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b10a933.css",
+    "static/js/main.f12af94f.js"
+  ]
+}
