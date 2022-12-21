@@ -37,6 +37,7 @@ const ProductInfo = ({ cart, addItem }) => {
             onClick={() => {
               addItem(product);
             }}
+            className="text-button"
           >
             <div>Add To Cart</div>
             <div>{"$" + product.price}</div>

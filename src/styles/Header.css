@@ -1,10 +1,10 @@
 .Header {
   background-color: rgb(255, 255, 255);
-  min-height: 13vh;
+  min-height: 120px;
   color: rgb(233, 151, 0);
   font-family: Pacifico;
   position: relative;
-
+  max-height: 17vh;
   display: flex;
   justify-content: space-between;
 }
@@ -32,11 +32,19 @@ a {
 #website-title > a {
   color: rgb(233, 151, 0);
 }
+
 #cart-button {
   margin-right: 50px;
   margin-top: 20px;
   position: relative;
   font-size: 55px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+#cart-button:hover {
+  font-size: 9vh;
+  transform: scale(1.05);
 }
 
 #item-count {

@@ -10,7 +10,6 @@
 }
 #shop-list {
   display: flex;
-  margin: 50px;
   justify-content: center;
   gap: 20vw;
   min-height: 100vh;

@@ -7,7 +7,10 @@
   font-family: Pacifico;
   src: url(../assets/fonts/Pacifico/Pacifico-Regular.ttf);
 }
-
+.text-button {
+  cursor: pointer;
+  user-select: none;
+}
 .LandingPage {
   min-height: 87vh;
   background-size: 100% 130%;
@@ -27,6 +30,11 @@
   font-size: 20px;
   width: fit-content;
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#check-shop-button:hover {
+  transform: scale(1.1);
 }
 
 #recommended-products {

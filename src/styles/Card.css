@@ -7,7 +7,13 @@
   background-color: rgb(226, 181, 125);
   flex-direction: column;
   font-family: Libre_Baskerville;
+  border-radius: 10px;
 }
+
+.Card:hover {
+  background-color: rgb(233, 151, 0);
+}
+
 .card-image {
   width: 200px;
   height: 180px;
@@ -15,5 +21,5 @@
   background-color: bisque;
 
   padding: 5px;
-  margin: 5px;
+  margin: 10px;
 }

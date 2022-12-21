@@ -33,7 +33,7 @@ const TotalItems = ({ cart, cartUI, toggleCart, removeAll, removeOne }) => {
                     Remove
                     <div className="remove-option-list">
                       <div
-                        className="remove-option"
+                        className="remove-option text-button"
                         onClick={() => {
                           removeOne(item);
                         }}
@@ -41,7 +41,7 @@ const TotalItems = ({ cart, cartUI, toggleCart, removeAll, removeOne }) => {
                         x1
                       </div>
                       <div
-                        className="remove-option"
+                        className="remove-option text-button"
                         onClick={() => removeAll(item)}
                       >
                         All
