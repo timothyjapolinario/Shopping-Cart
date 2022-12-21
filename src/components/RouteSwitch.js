@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 
 import "../styles/RouteSwitch.css";
 import Shop from "../pages/Shop";
@@ -61,7 +61,7 @@ const RouteSwitch = () => {
   };
   return (
     <div className="RouteSwitch">
-      <BrowserRouter>
+      <HashRouter>
         <Header
           cart={cart}
           removeAll={removeAllFromCart}
@@ -75,7 +75,7 @@ const RouteSwitch = () => {
             element={<ProductInfo cart={cart} addItem={addToCart} />}
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
